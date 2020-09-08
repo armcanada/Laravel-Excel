@@ -5,6 +5,7 @@ use PHPExcel;
 use Maatwebsite\Excel\Excel;
 use Maatwebsite\Excel\Collections\SheetCollection;
 use Maatwebsite\Excel\Exceptions\LaravelExcelException;
+use Illuminate\Support\Str;
 
 /**
  *
@@ -136,7 +137,7 @@ class ConfigReader {
     {
         if ($this->sheet)
         {
-            if (str_contains($coordinate, ':'))
+            if (Str::contans($coordinate, ':'))
             {
                 // We want to get a range of cells
                 $values = $this->sheet->rangeToArray($coordinate);

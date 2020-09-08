@@ -1,6 +1,7 @@
 <?php namespace Maatwebsite\Excel\Classes;
 
 use PHPExcel as PHPOffice_PHPExcel;
+use Illuminate\Support\Str;
 
 /**
  *
@@ -57,7 +58,7 @@ class PHPExcel extends PHPOffice_PHPExcel {
      */
     public function isChangeableProperty($method)
     {
-        $name = lcfirst(str_replace('set', '', $method));
+        $name = lcfirst(Str::replace('set', '', $method));
 
         return in_array($name, $this->getAllowedProperties()) ? true : false;
     }
