@@ -17,8 +17,6 @@
       "email": "patrick@maatwebsite.nl"
     }
   ],
-  "minimum-stability": "dev",
-  "prefer-stable" : true,
   "require": {
     "php": ">=5.5",
     "phpoffice/phpexcel": "dev-dev-1.9",
